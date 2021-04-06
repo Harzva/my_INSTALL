@@ -253,3 +253,12 @@ This filename has already been used, use a different version. See https://test.p
  12 password =pypi-AgENdGVzdC5weXBpLm9yZwIkOTFhMmM1ZTgtYmYyMS00ZmFhLWI0ZDItMmU0YjZkODkxNTQ3AAIleyJwZXJtaXNzaW9ucyI6ICJ1c2VyIiwgInZlcnNpb24iOiAxfQAABiA8lkrqlsLke5oFkOnavW0ZMekC6_KbSMyBR3KN    FQ8eOw
 
  起到免密码的作用
+
+
+ 导入的问题
+ from impport 
+ 如果不显示有可能是vscode 问题再次重启即可
+ import 导入的一定是class 对象
+ __int__.py存在的文件夹都会当成包了来导入
+ 可以有多个 每个代码目录下都要有，最外面的名字可以不是harzvatool 因为里面可以变 
+ from 导入的也是内层的pkg
