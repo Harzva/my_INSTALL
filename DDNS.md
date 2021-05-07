@@ -54,3 +54,6 @@ hk.wardchan.com, us.wardchan.com # 告诉 ddclient 要根据具体哪个域名�
 sudo cp sample-etc_systemd.service /etc/systemd/system/ddclient.service
 sudo systemctl enable ddclient.service
 sudo systemctl start ddclient.service
+
+ipconfig /flushdns
+ipconfig /displaydns

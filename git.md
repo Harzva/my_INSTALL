@@ -13,4 +13,4 @@
  13         remote = gitee
  14         merge = refs/heads/master
 
-vscode免密上传
+vscode免密上传,cd .git/config
