@@ -11,12 +11,19 @@ create hostname 选择域名并写入本地ip地址
 # /etc/ddclient.conf
 
 protocol=dyndns2
+
 use=if, if=ppp0
+
 ssl=yes
+
 server=dynupdate.no-ip.com
+
 login=626609967@qq.com
+
 password='ashzh10086'
+
 2i1080.ddns.net
+
 最后更新ddclient服务
 
 vscode://vscode.github-authentication/did-authenticate?windowid=1&code=bcfbb052207371667a16&state=6314cb90-032a-4023-97eb-db0739c5519d
