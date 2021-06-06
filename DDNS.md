@@ -19,7 +19,7 @@ password='ashzh10086'
 2i1080.ddns.net
 最后更新ddclient服务
 
-
+vscode://vscode.github-authentication/did-authenticate?windowid=1&code=bcfbb052207371667a16&state=6314cb90-032a-4023-97eb-db0739c5519d
 
 通过以下命令从 Github 下载 ddclient 并解压。
 
