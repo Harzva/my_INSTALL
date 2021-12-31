@@ -25,7 +25,8 @@ cat id_rsa.pub >> authorized_keys
 4
 重新打开vscode 项目即可。
 如果有问题，还无法打开， 请见检查服务端文件权限：
-
+、、、
 chmod 664 authorized_keys
 chmod 700 .ssh/
+、、、
 ————————————————
