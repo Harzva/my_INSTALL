@@ -36,3 +36,59 @@ https://github.com/liximomo/vscode-sftp
     }
 }
 ```
+
+
+
+```
+{
+    "name": "my_sftp",
+    "protocol": "sftp",
+    "port": 22,
+    "uploadOnSave": true,
+    "downloadOnOpen":false,
+    "context": "/mnt/4T/hzh/One-Shot-Object-Detection",
+    "ignore": [
+        ".vscode",
+        ".git",
+        ".DS_Store",
+        "node_modules",
+        "dist" ,
+        "**/.vscode/**",
+        "**/.git/**",
+        "**/.DS_Store",
+        "**/models/**",
+        "**/models_taitan4_2/**",
+        "**/models_taitan4/**",
+        "**/models_Alisure/**",
+        "**/output/**",
+        "**/logs/**",
+        "**/data/**",
+        "**/lib/build/**",
+        "**/lib/dist/**",
+        "**/lib/faster_rcnn.egg-info/**"
+    ],
+    "watcher": {
+        "files": "*",
+        "autoUpload": false,
+        "autoDelete": false
+    },
+    "profiles" : {
+        "server_name1": {
+            "name": "alisure1",
+            "username": "ubuntu",
+            "host": "10.170.15.237",
+            "password": "asdfg",
+            "remotePath": "/media/ubuntu/4T/hzh/lj/One-Shot-Object-Detection-main/" 
+        },
+        "server_name2": {
+            "name": "out21080",
+            "username": "ubuntu",
+            "host": "10.170.21.105",
+            "password": "asdfg",
+            "remotePath": "/home/ubuntu/Dataset/Partition1/hzh/lj/One-Shot-Object-Detection-main/"
+        }
+    }
+}
+
+http://www.javashuo.com/article/p-ztwbyexy-bt.html
+```
