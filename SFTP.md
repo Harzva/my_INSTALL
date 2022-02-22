@@ -3,7 +3,7 @@
 
 
 https://github.com/liximomo/vscode-sftp
-
+```
 {
     "name": "alisure",
     "host": "10.170.15.237",
@@ -35,4 +35,4 @@ https://github.com/liximomo/vscode-sftp
         "autoDelete": false
     }
 }
-
+```
