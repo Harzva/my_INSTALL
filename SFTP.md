@@ -15,7 +15,7 @@ https://github.com/liximomo/vscode-sftp
     "uploadOnSave": true,
     "downloadOnOpen":false,
     "ignore": [
-        "**/.vscode/**",
+        "**/.vscode/**",#.vscode/
         "**/.git/**",
         "**/.DS_Store",
         "**/models/**",
@@ -25,9 +25,10 @@ https://github.com/liximomo/vscode-sftp
         "**/output/**",
         "**/logs/**",
         "**/data/**",
-        "**/lib/build/**",
+        "**/lib/build/**",#"**/build/**", build, "*/build/*"
         "**/lib/dist/**",
-        "**/lib/faster_rcnn.egg-info/**"
+        "**/lib/faster_rcnn.egg-info/**",
+        "test"#无论哪一深度的test都不会 同步等同于"**/data  axxx/** 作用在于穿文件夹但内容不穿
     ],
     "watcher": {
         "files": "*",
