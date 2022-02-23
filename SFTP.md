@@ -1,5 +1,6 @@
 现在我们本地和远程均有一个文件夹“sftpFolder”，用VsCode打开本地文件夹“sftpFolder”，然后执行 ctrl+shift+p ，搜索 SFTP:Config ，回车后，会生成一个“.vscode/sftp.json”，这个就是配置文件。
-同时，如下图左侧会多了一个“远程目录”。
+同时，如下图左侧会多了一个“远程目录”。需要两边同时vscode在线吗 不用 但是1》2 》3 1想到3  2必须在线
+同时，profiles activate 状态的服务器会更新 切换另一个时并不会更新除非保存文件才会更新，或者全部上传，但profiles模式下的全部上传 ignore有问题，不能忽略
 
 
 https://github.com/liximomo/vscode-sftp
