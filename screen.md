@@ -1,5 +1,7 @@
 https://mp.weixin.qq.com/s/B-ip7Fs25jckxQOFc7BXQg
 https://blog.csdn.net/lovemysea/article/details/78344114
+
+
 ```
 在 screen session 外的常用命令
 screen -S session_name 新建一个名叫session_name的session，并马上进入
@@ -102,6 +104,19 @@ screen -L -t name -S name ./name
 第三步：离开回滚模式
 按Esc就可以退出了。
 [Ctrl]+[B] 翻页
+```
+
+```
+#创建一个后台运行任务
+[root@test #]$ vim test.sh
+#!/bin/bash
+n=0
+while [ $n -le 50 ]
+do 
+    echo $n
+    n=$(( $n + 1 ))
+    sleep 1
+done
 ```
 
 script 命令学习  ttyplay  ttyrec
