@@ -3,7 +3,7 @@
 [Linux Screen技巧：记录屏幕日志](https://blog.csdn.net/lovemysea/article/details/78344114)
 
 [linux screen打印日志](https://blog.csdn.net/yanggd1987/article/details/39082699)
-
+[screen命令]tps://blog.csdn.net/zyc_love_study/article/details/79282064)
 screen:
 1.普通模式
 ```
@@ -33,6 +33,7 @@ There is a screen on:
 
 screen -L -dmS test的意思是启动一个开始就处于断开模式的会话，会话的名称是test。
 screen -r test连接该会话，在会话中的所有屏幕输出都会记录到screenlog.0文件。
+没有VIM 之前-t 也不会报错，知识没用而已
 ```
 3.输出日志 
 ```
@@ -130,3 +131,37 @@ screen -x -S $screen_name -p 0 -X stuff $'\n'
 
 script 命令学习  ttyplay  ttyrec
 https://www.cnblogs.com/cornell/p/3833955.html
+
+1: 背景
+系统管理员经常需要SSH 或者telent 远程登录到Linux 服务器，经常运行一些需要很长时间才能完成的任务，比如系统备份、ftp 传输等等。通常情况下我们都是为每一个这样的任务开一个远程终端窗口，因为它们执行的时间太长了。必须等待它们执行完毕，在此期间不能关掉窗口或者断开连接，否则这个任务就会被杀掉，一切半途而废了。
+
+2: 简介
+GNU Screen是一款由GNU计划开发的用于命令行终端切换的自由软件。用户可以通过该软件同时连接多个本地或远程的命令行会话，并在其间自由切换。GNU Screen可以看作是窗口管理器的命令行界面版本。它提供了统一的管理多个会话的界面和相应的功能。
+
+3: 特点
+(1)会话恢复
+只要Screen本身没有终止，在其内部运行的会话都可以恢复。这一点对于远程登录的用户特别有用——即使网络连接中断，用户也不会失去对已经打开的命令行会话的控制。只要再次登录到主机上执行screen -r就可以恢复会话的运行。同样在暂时离开的时候，也可以执行分离命令detach，在保证里面的程序正常运行的情况下让Screen挂起（切换到后台）。这一点和图形界面下的VNC很相似。
+
+(2)多窗口
+在Screen环境下，所有的会话都独立的运行，并拥有各自的编号、输入、输出和窗口缓存。用户可以通过快捷键在不同的窗口下切换，并可以自由的重定向各个窗口的输入和输出。Screen实现了基本的文本操作，如复制粘贴等；还提供了类似滚动条的功能，可以查看窗口状况的历史记录。窗口还可以被分区和命名，还可以监视后台窗口的活动。
+
+(3)会话共享
+Screen可以让一个或多个用户从不同终端多次登录一个会话，并共享会话的所有特性（比如可以看到完全相同的输出）。它同时提供了窗口访问权限的机制，可以对窗口进行密码保护。
+screen -x screenname
+
+
+(1) 窗口共享
+screen -x screenname
+在另一个pc或者是terminal window上面attach一个处于addtched状态的screen, 这样就会共享一个窗口, 操作同步, 相当于同步演示.
+
+(2)会话锁定和解锁
+Screen允许使用快捷键C-a s锁定会话。锁定以后，再进行任何输入屏幕都不会再有反应了。但是要注意虽然屏幕上看不到反应，但你的输入都会被Screen中的进程接收到。快捷键C-a q可以解锁一个会话.
+解锁对话后window会处理显示在锁定期间的操作.
+也可以使用C-a x锁定会话，不同的是这样锁定之后，会话会被Screen所属用户的密码保护，需要输入密码才能继续访问这个会话.
+(但是ti2可以用C-a s锁定, 我的screen就不可以, 而且flow off也不行,奇怪)
+(3)发送命令给screen
+在Screen会话之外，可以通过screen命令操作一个Screen会话，这也为使用Screen作为脚本程序增加了便利。
+
+screen -S screen1 -X screen ping 8.8.8.8
+1
+在screen1这个screen中临时建立一个新的window来执行ping 8.8.8.8这个命令. 命令完成或者中断之后, 就会结束, 这个window也会消失.
