@@ -119,6 +119,9 @@ screen -dmS session_name
 screen -x -S session_name -p 0 -X stuff $'./bash_name.sh\n'
 ```
 screen.sh
+如何用bash脚本创建screen并向其发送命令？
+为什么要用脚本创建screen？
+为了利用服务器的多个cpu，我们经常需要同时创建多个screen，如果screen的个数非常多，手动创建会非常麻烦
 ```
 screen_name=$"my_screen"
 screen -dmS $screen_name
