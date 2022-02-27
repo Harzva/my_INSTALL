@@ -41,6 +41,7 @@ vim 让每个screen会话窗口有单独的日志文件。
 
 在screen配置文件/etc/screenrc最后添加下面一行：
 sudo -i   
+echo "logfile ./screen_log/screenlog_%t.log " >> /etc/screenrc
 echo "logfile /root/screen_%t.log" >> /etc/screenrc
 logfile /tmp/screenlog_%t.log
 logfile ./screen_log/screenlog_%t.log 则是把日志文件记录到当前目录下。  不会自动创建screen_log
