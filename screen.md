@@ -38,7 +38,7 @@ screen -r test连接该会话，在会话中的所有屏幕输出都会记录到
 3.输出日志 
 ```
 vim 让每个screen会话窗口有单独的日志文件。
-
+sudo tail -f -n3 screenlog_extra.log 动态观测 默认-n10
 在screen配置文件/etc/screenrc最后添加下面一行：
 sudo -i   
 echo "logfile ./screen_log/screenlog_%t.log " >> /etc/screenrc
