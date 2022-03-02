@@ -24,3 +24,8 @@ better comments
 （3） 选中要用的格式，其中 sphinx 和 pycharm的reStructuredText有些像；
 （4） 注意 Auto Docstring: Quote Style 里面可以设置用双引号（""" “”"）还是单引号(’’’ ‘’’)来触发autoDocstring
 ```
+```
+
+
+"better-comments.tags": [  {    "tag": "!",    "color": "#FF2D00",    "strikethrough": false,    "backgroundColor": "transparent"  },  {    "tag": "?",    "color": "#3498DB",    "strikethrough": false,    "backgroundColor": "transparent"  },  {    "tag": "//",    "color": "#474747",    "strikethrough": true,    "backgroundColor": "transparent"  },  {    "tag": "todo",    "color": "#FF8C00",    "strikethrough": false,    "backgroundColor": "transparent"  },  {    "tag": "*",    "color": "#98C379",    "strikethrough": false,    "backgroundColor": "transparent"  }]
+```
