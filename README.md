@@ -9,6 +9,8 @@ better comments
 Bracket Pair Colorizer
 indent-rainbow
 Code Translate
+_Markdown All in One_
+All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
 
 
 #  ! 红色的高亮注释
