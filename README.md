@@ -6,6 +6,11 @@ plug-in
 python snippets
 python preview
 better comments
+Bracket Pair Colorizer
+indent-rainbow
+Code Translate
+
+
 #  ! 红色的高亮注释
 # ? 蓝色的高亮注释
 #  * 绿色的高亮注释
