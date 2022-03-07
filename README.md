@@ -11,10 +11,9 @@ indent-rainbow
 Code Translate
 _Markdown All in One_
 All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
-Markdown Editor 
+Markdown Editor  What You See Is What You Get (WYSIWYG)
 icons
-
-
+markdownlint 语法提示
 
 #  ! 红色的高亮注释
 # ? 蓝色的高亮注释
