@@ -72,6 +72,9 @@ watch -n1 -d nvidia-smi
 * 在解决问题中禁用了nouveau驱动
   1. 用`vim`打开`blacklist.conf`文件
   ```
+ sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
   sudo vim /etc/modprobe.d/blacklist.conf
   ```
   2. 在文末添加下列内容
