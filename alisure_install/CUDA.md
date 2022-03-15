@@ -93,8 +93,8 @@ sudo gedit ~/.bashrc
 打开文件后在文件末尾添加路径，也就是安装目录，命令如下：
 
 ```
-export PATH=/usr/local/cuda-9.0/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda-10.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64:$LD_LIBRARY_PATH
 ```
 
 保存，然后使之生效:
@@ -121,6 +121,62 @@ sudo rm -rf cuda
 sudo ln -s /usr/local/cuda-x.x /usr/local/cuda
 ```
 
+### 安装cudnn——my
+https://developer.nvidia.com/rdp/cudnn-archive
+cuDNN Library for Linux 是最好的 
+cp  cudnn-10.0-linux-x64-v7.6.5.32.solitairetheme8   cudnn-10.0-linux-x64-v7.6.5.32.tgz
+tar -xvf cudnn-10.0-linux-x64-v7.6.5.32.tgz
+
+
+复制解压好的文件到对应的目录
+```
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+```
+3安装多版本CUDA
+按照上面两节安装另外版本的CUDA。假设都是默认的安装路径/usr/local/，现在安装了两个版本的CUDA
+```
+/usr/local/cuda-10.0
+/usr/local/cuda-10.1
+```
+查看当前cuda软链接指向的是哪个版本
+```
+stat /usr/local/cuda
+```
+切换版本
+
+# 建立需要切换版本的软链接,替换现有的软链接
+sudo ln -sf /usr/local/cuda-10.1 /usr/local/cuda
+
+4 使用中可能会遇到的问题
+1、libcudnn.so.7 is not a symbolic link
+
+找不到软链接，到cuda的lib64目录，默认的是/usr/local/cuda/lib64，建立软链接
+
+cd /usr/local/cuda/lib64
+sudo ln -sf libcudnn.so.7 libcudnn.so
+
+2、Could not dlopen library 'libcudnn.so.7’
+
+到cuda的lib64目录，默认的是/usr/local/cuda/lib64，找到自己安装的cudnn的版本对应的ibcudnn.so
+
+# 建立软链接
+sudo ln -sf libcudnn.so.7.6.5 libcudnn.so.7
+
+# 加载动态库
+sudo ldconfig /usr/local/cuda/lib64
+
+如果还不行
+
+# 编辑配置文件
+sudo vim /etc/ld.so.conf.d/cuda.conf
+
+# 添加cuda的lib64路径到文件中
+/usr/local/cuda/lib64
+
+# 加载动态库
+sudo ldconfig
 
 ### 安装cudnn
 
