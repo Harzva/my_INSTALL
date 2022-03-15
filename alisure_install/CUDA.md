@@ -12,6 +12,7 @@
 
 ```
 sudo sh cuda_9.0.176_384.81_linux.run
+sudo ./cuda_9.0.176_384.81_linux.run 报错
 ```
 
 单击回车，一路往下运行。
