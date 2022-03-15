@@ -177,7 +177,7 @@ sudo vim /etc/ld.so.conf.d/cuda.conf
 
 # 加载动态库
 sudo ldconfig
-
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 ### 安装cudnn
 
 > Inference: [Install_AND_path/install nvidiaDriver_cuda_cudnn.md](https://github.com/waallf/Install_AND_path/blob/master/install%20nvidiaDriver_cuda_cudnn.md)
