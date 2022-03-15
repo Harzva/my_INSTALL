@@ -46,6 +46,19 @@ Missing recommended library: libXmu.so
 Installing the CUDA Samples in /home/ubuntun ...
 Copying samples to /home/ubuntun/NVIDIA_CUDA-9.0_Samples now...
 Finished copying samples.
+
+安装cuda时可能有下面的信息
+
+Installing the CUDA Toolkit in /usr/local/cuda-8.0 …
+Missing recommended library: libGLU.so
+Missing recommended library: libX11.so
+Missing recommended library: libXi.so
+Missing recommended library: libXmu.so
+
+原因是缺少相关的依赖库,安装相应库就解决了：
+sudo apt-get install freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev 
+————————————————
+
 ```
 
 * 配置环境变量，方法一（所有用户，建议使用方法二）：
