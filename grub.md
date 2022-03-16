@@ -69,3 +69,12 @@ GRUB_CMDLINE_LINUX_DEFAULT="splash nomodeset"
 GRUB_CMDLINE_LINUX=""
 
 ```
+有grub,并且正常进入
+```
+GRUB_DEFAULT=0
+#GRUB_TIMEOUT_STYLE=hidden
+#GRUB_TIMEOUT=0
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+GRUB_CMDLINE_LINUX=""
+```
