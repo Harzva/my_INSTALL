@@ -1,4 +1,5 @@
-  1 [core]
+  ``` 
+  [core]
   2         repositoryformatversion = 0
   3         filemode = true
   4         bare = false
@@ -12,5 +13,5 @@
  12 [branch "master"]
  13         remote = gitee
  14         merge = refs/heads/master
-
+```
 vscode免密上传,cd .git/config
