@@ -13,7 +13,6 @@ GRUB_CMDLINE_LINUX=""
 
 sudo vim /etc/default/grub
 
-    1
 
 （2）splash后加上nomodeset
 
@@ -29,7 +28,6 @@ GRUB_CMDLINE_LINUX=""
 
 sudo update-grub
 
-    1
 
 （1）（2）（3）的作用是系统正常启动之后，为了防止黑屏，永久生效的解决办法
 
@@ -52,7 +50,6 @@ GRUB_CMDLINE_LINUX_DEFAULT：仅引导过程中生效
 
 GRUB_CMDLINE_LINUX="acpi_backlight=vendor"
 
-    1
 
 参数acpi_backlight=vendor，选择背景亮度为vendor型，可以用Fn调亮度
 试过，但没成功
