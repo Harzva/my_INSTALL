@@ -1,10 +1,9 @@
 
-test
-aaaaaa
+
+```
 
 4、git add .
 
-```
 5、git commit -m 
 
 6、git push origin master（git push origin 本地分支名:refs/remotes/远程分支名）
@@ -26,6 +25,8 @@ git remote add  https://gitee.com/harzva/One-Shot-Object-Detection.git
 git config --local user.name "Harzva"
 git config --local user.email  "626609967@qq.com"
 
+git config --global user.name "Harzva"
+git config --global user.email  "626609967@qq.com"
 git fetch origin master
 
 git fetch --all //只是下载代码到本地，不进行合并操作
