@@ -1,4 +1,5 @@
-## 一、坐标轴上下限
+https://www.cnblogs.com/lavender1221/p/12777444.html
+# 一、坐标轴上下限
 使用plt.xlim()和plt.ylim()来调整上下限的值：
 
 ```
@@ -37,7 +38,7 @@ tight：紧缩模式
 equal：以1：1的格式显示，x轴和y轴的单位长度相等
 scaled: 通过更改绘图框的尺寸来获得相同的结果
 square: x轴和y轴的限制值一样
-### 二、坐标轴刻度
+# 二、坐标轴刻度
 通常情况下，系统会自动根据提供的原始数据，生成x和y轴的刻度标签。但是很多时候，我们往往需要自定义刻度，让它符合我们的需要，比如下面的例子：
 ```
 plt.plot(np.random.randn(1000).cumsum())
@@ -51,7 +52,7 @@ plt.xticks([0,250,500,750,1000],rotation=30, fontsize='large')
 plt.yticks([-45,-35,-25,-15,0],rotation=30, fontsize='small')
 plt.show()
 ```
-### 三、坐标轴刻度详解
+# 三、坐标轴刻度详解
 Matplotlib图形对象具有层级关系。Figure对象其实就是一个盛放图形元素的盒子box，每个figure都会包含一个或多个axes对象，而每个axes对象又会包含其它表示图形内容的对象，比如xais和yaxis，也就是x轴和y轴。
 
 主要刻度和次要刻度
