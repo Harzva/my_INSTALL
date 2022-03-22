@@ -9,6 +9,7 @@ x = np.linspace(0,10,100)
 plt.plot(x,np.sin(x))
 plt.xlim(-1,11)
 plt.ylim(-1.5,1.5)
+
 plt.show()1
 ```
 ![输入图片说明](image1.png)
