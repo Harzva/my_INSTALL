@@ -11,7 +11,7 @@ plt.xlim(-1,11)
 plt.ylim(-1.5,1.5)
 plt.show()
 ```
-![输入图片说明](image.png)
+![输入图片说明](../my_image/image.png)
 也可以让坐标轴逆序显示，只需要逆序提供坐标轴的限值：
 ```
 plt.plot(x,np.sin(x))
