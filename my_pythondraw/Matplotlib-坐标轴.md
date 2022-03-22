@@ -43,7 +43,7 @@ square: x轴和y轴的限制值一样
 plt.plot(np.random.randn(1000).cumsum())
 plt.show()
 ```
-
+![输入图片说明](../my_image/image2.png)
 我们可以手动提供刻度值，并调整刻度的角度和大小：
 ```
 plt.plot(np.random.randn(1000).cumsum())
