@@ -4,7 +4,7 @@
 5、git commit -m 
 
 6、git push origin master（git push origin 本地分支名:refs/remotes/远程分支名）
-
+git config --list
 git config --global --list 
 $ git config --local --list
 git remote add github https://github.com/t-c-y/test.git
