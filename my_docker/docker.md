@@ -10,3 +10,27 @@ newgrp docker
 # 测试docker命令是否可以使用sudo正常使用
 docker version  
 ```
+## 查看容器状态：
+```
+docker状态
+docker stats xxx
+docker top xxx
+docker ps -a 所有
+docker ps 运行的
+docker inspect  test2
+docker inspect --format='{{.NetworkSettings.IPAddress}}' test2
+docker inspect --format '{{.Name}} {{.State.Running}}' test2
+```
+
+## docker 容器默认的目录：
+```/var/lib/docker/containers目录下 12 位开头的 就是 容器ID
+
+inspect 内容就是 config.v2.json 文件
+
+cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d167493a5b1e031d15120/config.v2.json```
+[史上最全Docker初学者命令大全](http:///cloud.tencent.com/developer/article/1698107)
+
+
+
+
+
