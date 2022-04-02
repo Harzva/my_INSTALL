@@ -27,10 +27,9 @@ docker inspect --format '{{.Name}} {{.State.Running}}' test2
 
 inspect 内容就是 config.v2.json 文件
 
-cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d167493a5b1e031d15120/config.v2.json```
+cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d167493a5b1e031d15120/config.v2.json
+```
+
 [史上最全Docker初学者命令大全](http:///cloud.tencent.com/developer/article/1698107)
 
-
-
-
-
+[Linux Screen技巧：记录屏幕日志](https://blog.csdn.net/lovemysea/article/details/78344114)
