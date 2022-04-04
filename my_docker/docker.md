@@ -33,3 +33,7 @@ cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d16749
 [史上最全Docker初学者命令大全](http:///cloud.tencent.com/developer/article/1698107)
 
 [Linux Screen技巧：记录屏幕日志](https://blog.csdn.net/lovemysea/article/details/78344114)
+
+
+sudo docker run -it --gpus all --name test2 bitnami/pytorch:1.3.0-r11 /bin/bash
+
