@@ -56,21 +56,13 @@ sudo ufw allow 11176 使得 所有连接11176的也可以
 
 
 如下图ufw status
+
 ![输入图片说明](my_image/ufw.png)
+但是内网也是危险的
+sudo ufw  delete allow  from 10.170.12.226/16
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+sudo ufw  allow  from 10.170.12.226 仅仅本机22 11176都可以连接其他必须11176
+![输入图片说明](my_image/ufw2.png)
 
 
 
@@ -78,5 +70,3 @@ sudo ufw allow 11176 使得 所有连接11176的也可以
 
 [在 Ubuntu 中用 UFW 配置防火墙](https://linux.cn/article-8087-1.html)
 
-
-![输入图片说明](%E5%85%AC%E7%BD%91%E5%92%8C%E5%86%85%E7%BD%91.png)
