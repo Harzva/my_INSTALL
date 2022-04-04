@@ -22,8 +22,16 @@ docker inspect --format='{{.NetworkSettings.IPAddress}}' test2
 docker inspect --format '{{.Name}} {{.State.Running}}' test2
 docker rmi 镜像id
 docker rm bde00bc086cf
-docker exec -it ubcu10 /bin/bash
- 
+docker exec -it ubcu10 /bin/bash 进入正在运行的容器
+
+
+重启容器：docker restart 容器ID
+
+重启容器后进入交互式：docker start -i 5c6ce895b979
+
+进入容器：docker attach 容器ID
+
+ docker exec -it 容器ID /bin/bash 
 ```
 
 ## docker 容器默认的目录：
@@ -41,7 +49,13 @@ cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d16749
 
 sudo docker run -it --gpus all --name ubcu10 -p 10001:22 -p 10002:10002  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh   nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04  /bin/bash
 
-sudo docker run -it --gpus all --name ubcu10-t1.3 -p 10003:22 -p 10003:10003  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh  huicongzhang/pytorch1.3-cuda10-cudnn7   /bin/bash
+sudo docker run -it --gpus all --name ubcu10-t1.3 -p 10003:22 -p 10004:10004  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh  huicongzhang/pytorch1.3-cuda10-cudnn7   /bin/bash
+
+镜像重命名
+ docker  tag  镜像id  仓库：标签
+
+容器重命名
+docker rename ubcu10-t1.3 ubcu10-p3.6-t1.3
 
 
 
@@ -67,3 +81,7 @@ sudo docker run -it --gpus all --name ubcu10-t1.3 -p 10003:22 -p 10003:10003  -v
 8888端口：Nginx服务器
 
 UDP67，UDP68：DHCP服务
+
+[docker-修改容器挂载目录的3种方法小结](docker-修改容器挂载目录的3种方法小结)
+
+[systemctl和service、chkconfig命令的关系](https://cshihong.github.io/2018/10/15/Linux%E4%B8%8Bsystemctl%E5%91%BD%E4%BB%A4%E5%92%8Cservice%E3%80%81chkconfig%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/#:~:text=%E6%89%80%E8%B0%93%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%20%28service%29%EF%BC%8C%E5%B0%B1%E6%98%AF%E9%9A%8F%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E8%80%8C%E5%90%AF%E5%8A%A8%EF%BC%8C%E9%9A%8F%E7%B3%BB%E7%BB%9F%E5%85%B3%E9%97%AD%E8%80%8C%E5%85%B3%E9%97%AD%E7%9A%84%E7%A8%8B%E5%BA%8F%E3%80%82%20systemctl%E5%91%BD%E4%BB%A4%E6%98%AF%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8%E6%8C%87%E4%BB%A4%EF%BC%8C%E5%AE%83%E5%AE%9E%E9%99%85%E4%B8%8A%E5%B0%86%20service%20%E5%92%8C,chkconfig%20%E8%BF%99%E4%B8%A4%E4%B8%AA%E5%91%BD%E4%BB%A4%E7%BB%84%E5%90%88%E5%88%B0%E4%B8%80%E8%B5%B7%E3%80%82%20systemctl%E6%98%AFRHEL%207%20%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%B8%AD%E4%B8%BB%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7%EF%BC%8C%E5%AE%83%E8%9E%8D%E5%90%88%E4%B9%8B%E5%89%8Dservice%E5%92%8Cchkconfig%E7%9A%84%E5%8A%9F%E8%83%BD%E4%BA%8E%E4%B8%80%E4%BD%93%E3%80%82)
