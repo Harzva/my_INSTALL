@@ -1,3 +1,61 @@
+配置cuda环境变量：
+打开终端，输入”gedit ~/.bashrc“，然后再弹出的编辑器的最后，添加如下两行
+
+
+```
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+测试CUDA
+进入你的CUDA Example所在目录，默认是主目录，找到“NVIDIA_CUDA-10.0_Samples”。依次打开“1_Utilities”–>“deviceQuery”，然后重新打开一个终端输入:
+
+# 使.bashrc的环境变量生效，重启之后或者打开新终端就不用再执行这一行了
+source ~/.bashrc
+# 修改文件权限
+sudo chmod -R 777 *
+# 编译
+make
+# 运行
+./deviceQuery
+
+```
+
+出现”Result = PASS“字样时，说明安装成功了
+安装CUDNN:
+地址：https://developer.nvidia.com/rdp/cudnn-archive
+选择符合自己cuda版本的
+下载“cuDNN Library for Linux”那一个,
+安装cudnn
+安装过程实际上是把cudnn的头文件复制到CUDA的头文件目录里面去；把cuDNN的库复制到CUDA的库目录里面去。
+首先需要将下载的cudnn解压，之后再执行如下命令：（大家也可以一个一个的移动到相应的cuda文件下）
+
+
+```
+# 复制cudnn头文件
+sudo cp cuda/include/* /usr/local/cuda-10.0/include/
+# 复制cudnn的库
+sudo cp cuda/lib64/* /usr/local/cuda-10.0/lib64/
+# 添加可执行权限
+```
+
+
+```
+sudo chmod +x /usr/local/cuda-10.0/include/cudnn.h
+sudo chmod +x /usr/local/cuda-10.0/lib64/libcudnn*
+```
+
+
+检验：
+输入如下命令：
+
+```
+
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+```
+
+
+
+
 ## 安装CUDA和CUDNN
 
 
