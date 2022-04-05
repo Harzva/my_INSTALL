@@ -262,3 +262,11 @@ This filename has already been used, use a different version. See https://test.p
  __int__.py存在的文件夹都会当成包了来导入
  可以有多个 每个代码目录下都要有，最外面的名字可以不是harzvatool 因为里面可以变 
  from 导入的也是内层的pkg
+
+python setup.py build develop
+python setup.py install 
+python setup.py develop
+
+test failed: build/bdist.linux-x86_64/egg does not support .pth files error: bad install directory 
+export PYTHONPATH="${PYTHONPATH}:/home/user1/lib/python3.7/site-packages/"
+The command should be python setup.py develop, not python setup.py install develop
