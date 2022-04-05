@@ -273,6 +273,7 @@ docker inspect 容器id
 
 # 二、可视化面板
 ## 1、安装
+![输入图片说明](../my_image/docker-visual.png)
 
 ```
 # 安装可视化面板 portainer （数据卷路径不可改变）
@@ -356,7 +357,7 @@ docker build [OPTIONS] PATH | URL | -
 
 ```
 
-image-20200906203902072
+![输入图片说明](../my_image/docker-dockerfile.png)
 
 「FROM: 基础镜像，一切都从这里开始构建」
 「MAINTAINER: 镜像是谁写的，姓名+邮箱」
