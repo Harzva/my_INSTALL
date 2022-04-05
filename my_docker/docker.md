@@ -40,6 +40,16 @@ docker exec -it ubcu10 /bin/bash 进入正在运行的容器
 inspect 内容就是 config.v2.json 文件
 
 cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d167493a5b1e031d15120/config.v2.json
+默认64M 67108864 67.108864 除以1000000 byte 
+64兆字节(MB) =64 *1024（KB）=65536（KB） =64*1024*1024（B）= 67108864字节(B) 
+1B（字节）=8b（位）
+1 KB = 1024 B
+1 MB = 1024 KB
+1 GB = 1024 MB
+1TB = 1024GB
+更改shm大小
+1 vim hostconfig.json 
+2 docker run -it --shm-size="1g" ubuntu
 ```
 
 [史上最全Docker初学者命令大全](http:///cloud.tencent.com/developer/article/1698107)
@@ -49,7 +59,9 @@ cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d16749
 
 sudo docker run -it --gpus all --name ubcu10 -p 10001:22 -p 10002:10002  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh   nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04  /bin/bash
 
-sudo docker run -it --gpus all --name ubcu10-t1.3 -p 10003:22 -p 10004:10004  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh  huicongzhang/pytorch1.3-cuda10-cudnn7   /bin/bash
+sudo docker run -it --gpus all --name ubcu10-t1.3 -p 10003:22 -p 10004:10004  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh   --shm-size="15g"   /bin/bash
+
+
 
 镜像重命名
  docker  tag  镜像id  仓库：标签
