@@ -252,7 +252,34 @@ docker cp 容器id:容器内文件的路径 宿主机路径
 docker cp 0cd4d9d94de2:/Test.java /Test.java
 ```
 
-### 3.9 其他常用命令
+### 3.9 docker的导入与导出
+
+
+```
+#docker commit :从容器创建一个新的镜像
+docker commit -a "harzva" -m "coae" afbefb074d17 coae:v1
+
+sudo docker commit <CONTAINER ID> busybox-1
+#保存(Save）命令用于持久化镜像（不是容器）。
+sudo docker save busybox-1 > /home/save.tar
+的步骤导入镜像：
+# 导入save.tar文件
+docker load < /home/save.tar
+
+#导出(Export)
+Export命令用于持久化容器（不是镜像）。
+sudo docker export <CONTAINER ID> > /home/export.tar
+
+现在开始导入刚刚导出的容器：
+
+# 导入export.tar文件
+cat /home/export.tar | sudo docker import - busybox-1-export:latest
+
+```
+[docker 实践（二） save&&export导出容器](https://www.cnblogs.com/ludada/articles/13839158.html)
+
+
+### 3.10 其他常用命令
 
 ```
 「查看日志命令」
