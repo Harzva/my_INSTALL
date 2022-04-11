@@ -100,6 +100,8 @@ UDP67，UDP68：DHCP服务
 
 
 
+
+
 # 一、基础命令
 ## 1. 帮助命令
 
@@ -291,7 +293,38 @@ cat /home/export.tar | sudo docker import - busybox-1-export:latest
 [docker 实践（二） save&&export导出容器](https://www.cnblogs.com/ludada/articles/13839158.html)
 
 
-### 3.10 其他常用命令
+### 3.10上传dockerhub
+
+```
+1，账号注册与登录
+（1）首先在 Docker Hub 上注册一个账号：
+官网地址：https://hub.docker.com/
+
+（2）注册后在控制台中使用 docker login 命令登录我们的账号。
+原文:Docker - 将制作好的镜像上传到Docker Hub仓库（附操作步骤）
+
+2，修改镜像 repository
+上传镜像前我们必须通过 docker tag 命令修改镜像的 repository，使之与 Docker Hub 账号匹配。
+Docker Hub 为了区分不同用户的同名镜像，镜像的 registry 中要包含用户名，完整格式为：[username]/xxx:tag
+
+docker tag hangge_server yuhang0385/hangge_server:v1
+原文:Docker - 将制作好的镜像上传到Docker Hub仓库（附操作步骤）
+
+3，上传镜像
+（1）我们使用 docker push 命令将镜像上传到 Docker Hub：
+
+docker push yuhang0385/hangge_server:v1
+
+（2）上面命令执行后 Docker 便会上传镜像的每一层。
+因为这个镜像实际上就是基于官方 httpd 镜像制作的，而 Docker Hub 上已经有了 httpd 的全部镜像层，所以真正上传的数据很少。
+原文:Docker - 将制作好的镜像上传到Docker Hub仓库（附操作步骤）
+
+（3）同样地，如果想要上传同一 repository 中所有镜像，省略 tag 部分就可以了。
+
+docker push yuhang0385/hangge_server
+```
+
+### 3.11 其他常用命令
 
 ```
 「查看日志命令」
