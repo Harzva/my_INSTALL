@@ -59,8 +59,10 @@ cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d16749
 
 sudo docker run -it --gpus all --name ubcu10 -p 10001:22 -p 10002:10002  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh   nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04  /bin/bash
 
-sudo docker run -it --gpus all --name ubcu10-t1.3 -p 10003:22 -p 10004:10004  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh   --shm-size="15g"   /bin/bash
+sudo docker run -it --gpus all --name ubcu10-t1.3 -p 10003:22 -p 10004:10004  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh   --shm-size="15g"  coae:v1  
+ /bin/bash
 
+sudo docker run -it --gpus all --name ubcu10-1 -p 10003:22 -p 10004:10004  -v /media/ubuntu/T7/hzh/:/media/ubuntu/T7/hzh   --shm-size=15G  coae:v1 /bin/bash
 
 
 镜像重命名
