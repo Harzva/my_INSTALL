@@ -6,7 +6,12 @@
 6、git push origin master（git push origin 本地分支名:refs/remotes/远程分支名）
 
 ```
+git config branch.master.remote <remote origin>  
+  
+git config branch.master.merge refs/heads/master  
 
+git remote remove <name>
+git remote -v
 git config --list
 git config --global --list 
 git config --local --list
