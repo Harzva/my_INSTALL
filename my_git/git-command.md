@@ -4,9 +4,12 @@
 5、git commit -m 
 
 6、git push origin master（git push origin 本地分支名:refs/remotes/远程分支名）
+
+```
+
 git config --list
 git config --global --list 
-$ git config --local --list
+git config --local --list
 git remote add github https://github.com/t-c-y/test.git
 git remote add origin https://github.com/t-c-y/test.git
 git remote add gitee https://github.com/t-c-y/test.git
@@ -30,11 +33,11 @@ git fetch origin master
 git fetch --all //只是下载代码到本地，不进行合并操作
 git reset --hard origin/master  //把HEAD指向最新下载的版本
 git reset --hard 目标版本号
-这里实际上有三件事:origin master是两件事，origin/master一件事。共计三件事。
+```
 
 
-两个分支
-
+```
 master 是一个本地分支
 origin/master是远程分支（它是名为“origin” 的远程分支的本地副本，名为“master”）
 git fetch origin main
+```
