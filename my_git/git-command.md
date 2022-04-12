@@ -14,7 +14,8 @@ git remote add gitee https://github.com/t-c-y/test.git
 git remote rm origin
 git remote add https://github.com/Harzva/One-Shot-Object-Detection.git  origin远程地址的别名
 git remote add git@gitee.com:Yourgitee_username/YourGitRepo.git
-git remote add  originee https://gitee.com/harzva/One-Shot-Object-Detection.git   git@gitee.com:harzva/One-Shot-Object-Detection.git
+git remote add  originee https://gitee.com/harzva/One-Shot-Object-Detection.git   
+git@gitee.com:harzva/One-Shot-Object-Detection.git
 
 git remote add  https://gitee.com/harzva/One-Shot-Object-Detection.git
 
