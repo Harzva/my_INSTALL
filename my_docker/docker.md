@@ -52,6 +52,11 @@ cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d16749
 2 docker run -it --shm-size="1g" ubuntu
 ```
 
+"MountPoints":{"/media/ubuntu/T7/hzh":{"Source":"/home/ubuntu/Data/hzh","Destination":"/media/ubuntu/T7/hzh","RW":true,"Name":"","Driver":"","Type":"bind","Propagation":"rprivate","Spec":{"Type":"bind","Source":"/home/ubuntu/Data/hzh","Target":"/media/ubuntu/T7/hzh"},"SkipMountpointCreation":false},"/media/ubuntu/T7/hzh/data":{"Source":"/home/ubuntu/Documents/hzh/data","Destination":"/media/ubuntu/T7/hzh/data","RW":true,"Name":"","Driver":"","Type":"bind","Propagation":"rprivate","Spec":{"Type":"bind","Source":"/home/ubuntu/Documents/hzh/data","Target":"/media/ubuntu/T7/hzh/data"},"SkipMountpointCreation":false},
+}
+[已启动的docker容器挂载新路径](https://blog.csdn.net/chyf1990/article/details/113621719)
+
+
 [史上最全Docker初学者命令大全](http:///cloud.tencent.com/developer/article/1698107)
 
 [Linux Screen技巧：记录屏幕日志](https://blog.csdn.net/lovemysea/article/details/78344114)
