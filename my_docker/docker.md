@@ -51,6 +51,11 @@ cat /var/lib/docker/containers/23defb07e362b81fa9d282382dfb5101e7a269f97b3d16749
 1 vim hostconfig.json 
 2 docker run -it --shm-size="1g" ubuntu
 ```
+Warning: Stopping docker.service, but it can still be activated by: docker.socket
+systemctl stop docker.socket
+
+hostconfig.json:
+"/home/ubuntu/Data/hzh:/media/ubuntu/T7/hzh","/home/ubuntu/Documents/hzh/data:/media/ubuntu/T7/hzh/data"]
 
 "MountPoints":{"/media/ubuntu/T7/hzh":{"Source":"/home/ubuntu/Data/hzh","Destination":"/media/ubuntu/T7/hzh","RW":true,"Name":"","Driver":"","Type":"bind","Propagation":"rprivate","Spec":{"Type":"bind","Source":"/home/ubuntu/Data/hzh","Target":"/media/ubuntu/T7/hzh"},"SkipMountpointCreation":false},"/media/ubuntu/T7/hzh/data":{"Source":"/home/ubuntu/Documents/hzh/data","Destination":"/media/ubuntu/T7/hzh/data","RW":true,"Name":"","Driver":"","Type":"bind","Propagation":"rprivate","Spec":{"Type":"bind","Source":"/home/ubuntu/Documents/hzh/data","Target":"/media/ubuntu/T7/hzh/data"},"SkipMountpointCreation":false},
 }
