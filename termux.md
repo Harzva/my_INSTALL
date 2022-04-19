@@ -44,3 +44,9 @@ proot-distro login ubuntu-20.04
 输入exit可以退出登录的linux系统：
 
 exit
+
+vscode server 因为 没有systemed
+curl -fsSL https://code-server.dev/install.sh |sh
+code-server
+cat .config/code-server/config.yaml
+htt://localhost:8080
