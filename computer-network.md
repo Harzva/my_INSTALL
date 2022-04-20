@@ -1,3 +1,4 @@
+[linux 路由表设置 之 route 指令详解](https://www.cnblogs.com/AdamChen/p/12431199.html)
 
 ubuntu 系统默认已安装ufw.
 
