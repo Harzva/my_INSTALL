@@ -16,5 +16,5 @@ pip install torch==1.6.0+cu102 torchvision==0.7.0+cu102 -f https://download.pyto
 
 pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 
-pip install torch==1.6.0+cu102 torchvision==0.7.0+cu102  -i https://mirrors.aliyun.com/pypi/simple/
+pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101  -i https://mirrors.aliyun.com/pypi/simple/
 
