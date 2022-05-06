@@ -54,7 +54,9 @@ github高级搜索功能
 1. 下载到本地
 2. 在线vscode：仓库详情界面按下“。”键，
 
+https://github.dev/timy90022/One-Shot-Object-Detection
 
+https://github1s.com/timy90022/One-Shot-Object-Detection
 
 ## 4.在线运行项目
 
