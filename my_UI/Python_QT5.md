@@ -72,3 +72,4 @@ sudo gedit ~/.bashrc
 
 export QT_DEBUG_PLUGINS=1
 ```
+然后缺啥安装啥
