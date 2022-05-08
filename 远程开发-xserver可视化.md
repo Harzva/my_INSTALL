@@ -1,4 +1,6 @@
 
+[输远程开发VsCode终端中运行PyQt5程序报错qt.qpa.xcb_ could not connect to display](https://blog.csdn.net/qq_41092406/article/details/118201187)
+
 打开有x服务器的远程shell工具，比如mobaxterm，Xshell等，连接远程主机（vscode连接的主机）
 
 1.输入
