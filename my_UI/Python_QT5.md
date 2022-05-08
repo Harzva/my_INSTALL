@@ -60,3 +60,15 @@ from PyQt5.QtWidgets import * 	# QAction,QFileDialog
 from PyQt5.QtGui import *       # QIcon,QPixmap
 from PyQt5.QtCore import *      # QSize
 ```
+
+
+
+```
+1.修改配置文件：
+
+sudo gedit ~/.bashrc
+
+2.在最末尾添加如下语句并保存，在运行测试用例的时候会列出详细的错误提示：
+
+export QT_DEBUG_PLUGINS=1
+```
