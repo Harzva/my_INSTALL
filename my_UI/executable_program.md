@@ -1,5 +1,7 @@
 # Windows
-- [ ]
+- [x] sd 
+- [ ] test2
+- [ ] test4
 
 1.首先，安装pyinstaller模块，这个直接在cmd窗口输入命令“pip install pyinstaller”就行，如下：
 
