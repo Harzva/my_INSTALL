@@ -1,5 +1,4 @@
 # Windows
-[py脚本”就会自动开始打包，参数F代表打包成一个独立的exe文件，w代表去掉调试窗口，如下：]-
 
 1.首先，安装pyinstaller模块，这个直接在cmd窗口输入命令“pip install pyinstaller”就行，如下：
 
