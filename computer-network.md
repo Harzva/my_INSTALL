@@ -3,7 +3,7 @@
 连接有线网络 
 
 [Linux命令大全(手册)](https://www.linuxcool.com/)
-
+[dhclient命令 – 动态获取或释放IP地址](https://www.linuxcool.com/dhclient)
 
 
 dhclient命令来自于英文词组“DHCP client”的缩写，其功能是用于动态获取或释放IP地址。使用dhclient命令前需要将网卡模式设置成DHCP自动获取，否则静态模式的网卡是不会主动向服务器获取如IP地址等网卡信息的。
