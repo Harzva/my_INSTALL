@@ -1,3 +1,6 @@
+ethtool nic
+df -h tmp
+
 # Installation
 
 
