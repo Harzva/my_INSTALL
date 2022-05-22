@@ -50,17 +50,6 @@ https://www.freesion.com/article/55341206024/
 https://dalewushuang.blog.csdn.net/article/details/107705492?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&utm_relevant_index=2
 ```
 
-[{
-    "name": "demo",
-    "type": "python",
-    "request": "launch",
-    "program": "/home/ubuntu/Dataset/Partition1/dyy/IPIU-VAD-dyy/demo.py",
-    "console": "integratedTerminal",
-    "justMyCode": true,
-    "cwd":"${fileDirname}"
-}
-](http://)
-
 
 
 ```
@@ -83,7 +72,21 @@ code runner
 
 
 2
+当前文件夹作为目录 
 "python": "cd $dir \n python -u $fileName",
+
+
+
+手动打开就可以哪就是工作目录
+
+最终两种运行模式
+一种coderun 当前文件为工作目录
+另外一种就是当前终端路径为工作目录
+
+而debug
+cwd 就可以
+
+
 
  "code-runner.fileDirectoryAsCwd": true,
 Terminal Here
