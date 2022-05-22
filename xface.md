@@ -64,6 +64,10 @@ LC_ALL="zh_CN.UTF-8"
 
 ## 6.给WSL2终端和git配置代理
 
+
+
+
+
 ### 一.在 Windows主机内通过 Clash开启代理，并允许通过LAN连接
 
 ### 二.假设 Windows 上的 Clash 已允许 LAN 连接，监听在7890端口，
