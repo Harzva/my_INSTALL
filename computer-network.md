@@ -1,7 +1,27 @@
+# dhclient
+
+连接有线网络 
+
+[Linux命令大全(手册)](https://www.linuxcool.com/)
+
+
+
+dhclient命令来自于英文词组“DHCP client”的缩写，其功能是用于动态获取或释放IP地址。使用dhclient命令前需要将网卡模式设置成DHCP自动获取，否则静态模式的网卡是不会主动向服务器获取如IP地址等网卡信息的。
+
+语法格式：dhclient 参数 [网卡]
+
+sudo dhclient eth0
+ 
+dmesg | grep eth
+
+
+
 [linux 路由表设置 之 route 指令详解](https://www.cnblogs.com/AdamChen/p/12431199.html)
 
 ubuntu 系统默认已安装ufw.
 
+
+# ufw
 1.安装
 `sudo apt-get install ufw`
 
