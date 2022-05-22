@@ -1,3 +1,90 @@
+/user/share/backgrounds/xfce
+/usr/share/xfce4/backdrops
+
+[如何优雅的桌面远程Ubuntu](https://zhuanlan.zhihu.com/p/126265221)
+## 0.Xfce安装
+Xfce + TightVNC
+Ubuntu自带屏幕分享
+先来说说第一种方案的缺点，开启UbuntuXfce + TightVNC之后，自身的桌面服务无法启动，（一般来说，windows的远程桌面，被远程的机器也是无法操控桌面的。）所以这种方案适用于远程机器不使用桌面服务的场景。具体操作如下：
+
+安装Xfce及TightVNC
+
+
+```shell
+sudo apt update
+sudo apt install xfce4 xfce4-goodies
+sudo apt install tightvncserver
+```
+
+启动vncserver并进行配置：
+
+`vncserver`
+
+```
+Password:
+Verify:
+
+Would you like to enter a view-only password (y/n)? n
+xauth:  file /home/yourname/.Xauthority does not exist
+
+New 'X' desktop is your_hostname:1
+```
+
+将刚才启动的vncserver终止，修改配置文件
+
+
+```
+vncserver -kill :1
+mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
+vim ~/.vnc/xstartup
+```
+
+修改xstartup
+
+
+```bash
+#!/bin/bash
+xrdb $HOME/.Xresources
+startxfce4 &
+```
+
+推出并保存，设置xstartup权限
+
+`sudo chmod +x ~/.vnc/xstartup`
+再次启动vncserver，可以配置对应屏幕分辨率：
+
+```
+
+vncserver -geometry 1920x1080
+
+```
+启动成功将输出：
+
+
+
+
+```
+
+ _New 'X' desktop is your_hostname:1
+
+Starting applications specified in /home/yourname/.vnc/xstartup
+Log file is /home/yourname/.vnc/your_hostname:1.log_ 
+
+```
+
+
+
+此时，重启Ubuntu系统，在另一台机器上下载VNC客户端进行连接：
+
+ip输入：1.2.3.4:1
+
+其他配置默认。
+
+
+
+
+
+
 ## 1.安装谷歌浏览器
 
 ```
