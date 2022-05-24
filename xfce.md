@@ -40,7 +40,7 @@ vim ~/.vnc/xstartup
 ```
 
 修改xstartup
-
+如果连接不上试着 开放端口 5900+桌面号.
 
 ```bash
 #!/bin/bash
