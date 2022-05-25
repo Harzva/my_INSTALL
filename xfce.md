@@ -256,4 +256,7 @@ header = {
 response = requests.post(url, data, headers=header)
 print("状态码:", response.status_code)
 
-```
+
+
+[vnc4server多用户配置](https://www.jianshu.com/p/24ade8ca7672)
+
