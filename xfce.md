@@ -9,7 +9,7 @@ ethtool eno2
 Link detected: no
 ```
 
-### 1.1 给eth0网口分配局域网ip地址
+### 1.1 给eth0网口分配临时的局域网ip地址
 
 `sudo dhclient eth0 ` 
 
