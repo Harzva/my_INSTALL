@@ -1,5 +1,6 @@
-import requests
 
+```
+import requests
 
 # 1. 登录请求地址，下面是西电的登录地址
 url = 'https://w.xidian.edu.cn/srun_portal_pc.php'
@@ -28,3 +29,4 @@ header = {
 # 4. 以post方式发送登录请求；返回状态码为200则表示请求成功，打开浏览器尽情的网上冲浪吧~
 response = requests.post(url, data, headers=header)
 print("状态码:", response.status_code)
+```
