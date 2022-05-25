@@ -16,6 +16,7 @@ Link detected: no
 ### 1.2 最下方查看源码,输出200即可上网
 
 `python /media/ubuntu/net/xidian.py `
+
 ![输入图片说明](my_image/image_xface.png.png)
 
 ## 2、开启桌面
