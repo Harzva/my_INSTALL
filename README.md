@@ -9,6 +9,10 @@ df -h tmp
 
 plug-in
 ```python
+image preview
+Python Image Preview
+
+Copy Linux Like Path
 Git Graph和GitLens
 python snippets
 python preview
