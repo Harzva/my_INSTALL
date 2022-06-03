@@ -94,7 +94,9 @@ code runner
         "php": "php",
         "python": "cd $dir \n D:/ruanjian/anaconda3/Scripts/activate \n conda  activate py36 \n python -u AnnotationPlayerFromTXT_Modify_V1.py",
 
-```
+
+        // "python": "cd $dir \n D:/ruanjian/anaconda3/Scripts/activate \n conda activate py36 \n python -u AnnotationPlayerFromTXT_Modify_V1.py",
+        "python": "python -u AnnotationPlayerFromTXT_Modify_V1.py",```
 
 
 手动打开就可以哪就是工作目录
