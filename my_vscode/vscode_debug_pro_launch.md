@@ -81,6 +81,19 @@ code runner
  "code-runner.executorMap": {
        "python": "cd $dir \n conda activate py36 \n python -u $fileName",
 
+
+{
+    "code-runner.executorMap": {
+
+
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "cd $dir \n D:/ruanjian/anaconda3/Scripts/activate \n conda  activate py36 \n python -u AnnotationPlayerFromTXT_Modify_V1.py",
+
 ```
 
 
