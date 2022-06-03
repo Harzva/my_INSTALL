@@ -73,10 +73,15 @@ code runner
 
 2
 当前文件夹作为目录 
+
+
+```
 "python": "cd $dir \n python -u $fileName",
 
  "code-runner.executorMap": {
        "python": "cd $dir \n conda activate py36 \n python -u $fileName",
+
+```
 
 
 手动打开就可以哪就是工作目录
