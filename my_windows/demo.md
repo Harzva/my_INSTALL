@@ -9,3 +9,6 @@ Step2 输入命令runas /users:管理员用户名 cmd
 2、验证命令 npm config get registry 如果返回 https://registry.npm.taobao.org，说明镜像配置成功。
 3、最后执行npm install picgo-plugin-gitee-uploader
 ```
+
+
+https://blog.csdn.net/lunhui601/article/details/107722580
