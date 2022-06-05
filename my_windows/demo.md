@@ -12,3 +12,5 @@ Step2 输入命令runas /users:管理员用户名 cmd
 
 
 https://blog.csdn.net/lunhui601/article/details/107722580
+
+https://www.uud.me/site-notes/sharex-picgo-weibo.html
