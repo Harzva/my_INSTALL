@@ -94,4 +94,4 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 conda config --set show_channel_urls yes
 
 ```
-![输入图片说明](my_image/111.png.png)
+![](https://gitee.com/harzva/my_INSTALL/raw/master/my_image/Picgo_image/20220606012159.png)
