@@ -19,7 +19,7 @@ ethtool eno2
 Link detected: no
 ```
 
-### 1.1 给eth0网口分配临时的局域网ip地址
+### 1.1 给eth0网口分配临时的局域网ip地址(以往的经验：后面连网上后ip会变否则还是不能远程终端)
 
 `sudo dhclient eth0 ` 
 
