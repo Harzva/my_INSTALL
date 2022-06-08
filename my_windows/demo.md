@@ -16,3 +16,60 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 https://blog.csdn.net/lunhui601/article/details/107722580
 
 https://www.uud.me/site-notes/sharex-picgo-weibo.html
+
+
+
+Ubuntu 20.04.4 LTS 报错解决方案
+今天在安装WSL的时候连续报了几个错，这里记录以下解决方案。注意是20.04.4的版本。
+
+\quad
+
+WslRegisterDistribution failed with error: 0x8007019e
+我遇到的第一个错如下：
+
+```
+
+Installing, this may take a few minutes...
+Installation Failed!
+Error: 0x8007019e
+Press any key to continue...
+```
+
+
+出现这个error的原因是：未安装Windows子系统支持。
+
+解决办法：
+
+win+x，选择Windows PowerShell（管理员）
+输入：Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+回车，输入Y，重启！
+重新打开已经安装的子系统，等几分钟，输入账户和密码。
+试了这个办法之后还是不行，新的错误出现了…
+
+\quad
+
+WslRegisterDistribution failed with error: 0x800701bc
+继续排错，出现这个错误的原因是：wsl1升级到wsl2之后，内核却没有升级，所以会出现这种错误提示！
+
+解决方法：
+
+下载最新的wsl安装包，
+安装包下载后，直接运行安装。
+下载地址： [wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) 
+
+安装之后发现还是不行，报了下面这个错…
+
+\quad
+
+WslRegisterDistribution failed with error: 0x80370102
+继续排错，查到出现这个error的原因是：没有开启虚拟化。
+
+解决方案：
+
+控制面板->程序->启用或关闭windows功能，勾选虚拟机平台选项。
+重启电脑
+
+
+
+到这里，问题终于顺利的解决了！
+https://blog.csdn.net/qq_37085158/article/details/125172803
