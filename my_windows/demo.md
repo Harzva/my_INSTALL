@@ -10,6 +10,8 @@ Step2 输入命令runas /users:管理员用户名 cmd
 3、最后执行npm install picgo-plugin-gitee-uploader
 ```
 
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
 
 https://blog.csdn.net/lunhui601/article/details/107722580
 
