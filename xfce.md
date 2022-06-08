@@ -1,3 +1,13 @@
+# Linux/Ubuntu下的PPPoE拨号上网方法
+
+```
+sudo pppoeconf
+sudo pon dsl-provider
+sudo poff
+plog
+```
+
+
 # 如何使用
 command 1.1和1.2 可远程连接ssh 2.1可远程进入虚拟桌面
 ## 1、连接网络
