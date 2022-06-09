@@ -73,3 +73,16 @@ WslRegisterDistribution failed with error: 0x80370102
 
 到这里，问题终于顺利的解决了！
 https://blog.csdn.net/qq_37085158/article/details/125172803
+
+
+2、WSL2 联网
+安装好 Ubuntu 18.04 LTS，创建一个账号（PS：账号不能有大写字母），ping 百度失败后执行下面操作。
+
+2.1 关闭防火墙
+具体原因及其操作详见此链接。
+
+2.2 在 Windows 用管理员运行以下代码
+    netsh winsock reset 
+    netsh int ip reset all
+    netsh winhttp reset proxy
+    ipconfig /flushdns
