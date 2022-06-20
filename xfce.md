@@ -75,6 +75,7 @@ xauth:  file /home/yourname/.Xauthority does not exist
 
 New 'X' desktop is your_hostname:1
 ```
+vncpasswd
 
 将刚才启动的vncserver终止，修改配置文件
 
