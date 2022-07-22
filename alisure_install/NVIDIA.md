@@ -45,6 +45,8 @@ reboot
 ```
 cat /proc/version
 uname -a
+dpkg --get-selections |grep linux
+sudo apt-get remove linux-image-4.15.0-29-generic
 ```
 
 
