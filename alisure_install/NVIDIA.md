@@ -42,6 +42,11 @@ sudo apt install nvidia-driver-510
 reboot
 ```
 
+```
+cat /proc/version
+uname -a
+```
+
 
 
   ```
