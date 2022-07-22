@@ -39,7 +39,9 @@ watch -n1 -d nvidia-smi
 
 ```
 sudo apt install nvidia-driver-510
+reboot
 ```
+
 
 
   ```
