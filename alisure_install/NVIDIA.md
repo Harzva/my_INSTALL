@@ -37,6 +37,11 @@ watch -n1 -d nvidia-smi
   
   下载驱动：[https://www.nvidia.com/Download/index.aspx](https://www.nvidia.com/Download/index.aspx)
 
+```
+sudo apt install nvidia-driver-510
+```
+
+
   ```
   CTRL + ALT + F1
   sudo service lightdm stop
