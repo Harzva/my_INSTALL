@@ -271,3 +271,20 @@ print("状态码:", response.status_code)
 
 [vnc4server多用户配置](https://www.jianshu.com/p/24ade8ca7672)
 
+
+```
+curl 'https://10.255.44.33/login' \
+  -H 'Connection: keep-alive' \
+  -H 'Cache-Control: max-age=0' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'Origin: https://10.255.44.33' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'Referer: https://10.255.44.33/srun_portal_pc.php?ac_id=1&' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H 'Cookie: login=bQ0pOyR6IXU7PJaQQqRAcBPxGAvxAcroYpuUwev57jOQKDMDajfaGowre2eElYyKph3wkZfo4Q4DorIQdiXTx8%252FxLMmM0I3rtG0z4jZuG9GGx5qulsXfVS2S%252BCjM35YBaR6zLAsEHvQMzHxdP%252FNjmpL65ZK9V79Ab2S61AkWOhoWn5t3BFn%252BqsE%252FUw9YLK%252FhF5Tl%252BtfQmGuVgM%252F7K8u3Oplw%252FZxFW1%252BUw8cKxYJy7%252Fg%253D' \
+  --data-raw 'user=19171213779&pass=182676' \
+  --compressed \
+  --insecure ;
+```
