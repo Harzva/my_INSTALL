@@ -12,7 +12,7 @@
 
 @reboot sleep 60 ; /root/my-script.sh
 
-```
+```python
 以上一行设定开机后等待 1 分钟 (60 秒), 自动执行 /root/my-script.sh, 将上面的 /root/my-script.sh 改成要执行的指令。
 
 
