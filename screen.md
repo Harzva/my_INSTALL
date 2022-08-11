@@ -183,7 +183,6 @@ screen -S screen1 -X screen ping 8.8.8.8
 1
 在screen1这个screen中临时建立一个新的window来执行ping 8.8.8.8这个命令. 命令完成或者中断之后, 就会结束, 这个window也会消失.
 
-```
 
 
 快捷键
