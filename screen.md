@@ -1,3 +1,5 @@
+
+
 [Linux系统后台运行应用三板斧](https://mp.weixin.qq.com/s/B-ip7Fs25jckxQOFc7BXQg)
 
 [Linux Screen技巧：记录屏幕日志](https://blog.csdn.net/lovemysea/article/details/78344114)
@@ -133,6 +135,17 @@ screen -x -S $screen_name -p 0 -X stuff $'\n'
 ```
 
 
+```
+screen -dmS mv
+screen -dmS test bash -c 'echo good'
+screen -ls
+```
+
+
+
+参数 -S 指定会话 参数 -X  发送命令 参数 stuff  ?疑似?是输出命令执行 参数 -p 指定屏幕。-x 连接断开会话。经测试发现，不需要使用 参数 -x  。参数-p 0 指定屏幕 0是必须参数。
+
+
 script 命令学习  ttyplay  ttyrec
 https://www.cnblogs.com/cornell/p/3833955.html
 
@@ -169,3 +182,5 @@ Screen允许使用快捷键C-a s锁定会话。锁定以后，再进行任何输
 screen -S screen1 -X screen ping 8.8.8.8
 1
 在screen1这个screen中临时建立一个新的window来执行ping 8.8.8.8这个命令. 命令完成或者中断之后, 就会结束, 这个window也会消失.
+
+```
