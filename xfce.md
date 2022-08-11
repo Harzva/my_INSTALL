@@ -28,6 +28,24 @@ Link detected: no
 `python /media/ubuntu/net/xidian.py `
 
 ![输入图片说明](my_image/image_xface.png.png)
+### 开机自启动
+
+```
+一般上设定开机自动执行指令, 可以编辑 /etc/rc.local 档案, 而除了编辑 /etc/rc.local 外, 也可以用 crontab 完成。
+
+crontab 是十分好用的排程自动执行工具, 它指定执行时间间隔十分灵活, 其中一个做法是用 @reboot 参数, 设定成每次开机自动执行。
+
+首先开启 crontab:
+
+# crontab -e
+加入以下一行:
+
+@reboot sleep 60 ; /root/my-script.sh
+1
+@reboot sleep 60 ; /root/my-script.sh
+以上一行设定开机后等待 1 分钟 (60 秒), 自动执行 /root/my-script.sh, 将上面的 /root/my-script.sh 改成要执行的指令。
+```
+
 
 ## 2、开启桌面
 输入以下命令即可创建虚拟桌面,会默认分配ip序号：如果不写则从1开始每新建一个就会+1
