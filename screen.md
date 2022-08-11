@@ -184,3 +184,18 @@ screen -S screen1 -X screen ping 8.8.8.8
 在screen1这个screen中临时建立一个新的window来执行ping 8.8.8.8这个命令. 命令完成或者中断之后, 就会结束, 这个window也会消失.
 
 ```
+
+
+快捷键
+
+```
+ctrl a ctrl a，最近使用的两个窗口之间切换
+ctrl a + 数字，切换到某个窗口
+ctrl a + d，detach
+ctrl a + k，关闭当前窗口
+ctrl a + :，进入命令行模式
+ctrl a a，screen的快捷键的prefix默认是ctrl+a，这与bash中的快捷键（ctrl+a，回到命令开头）冲突，在screen要先按ctrl + a，再按a就可以了，注意不要和窗口切换的快捷键弄混
+ctrl a + [，进入复制模式，这个我用来翻屏
+ctrl a + A，修改当前窗口的名称
+```
+
