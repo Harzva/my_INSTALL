@@ -28,16 +28,22 @@
 
 但该命令无法正常执行，你会在系统邮件中收到该任务的执行失败提示：
 
+
+```
 Must be connected to a terminal.
 test screen
 There is no screen to be detached matching test.
+```
+
 
 解决方法：
 
 首先，在crontab命令之外，先用screen新建一个会话，比如还是上述的test
 crontab中的命令写为如下形式：
+
 `screen -S sessionname -X stuff 'command'`echo -ne '\015'``
+
 该命令的含义：将特定command发送到特定的screen会话,其中，echo -ne '\015'模拟的是按下回车键。
-注意： command与最后的echo命令之间没有空格。
-比如，依旧是上述定时任务，就可写成如下形式：
+注意： command与最后的echo命令之间没有空格。比如，依旧是上述定时任务，就可写成如下形式：
+
 `screen -S test -X stuff 'echo ""test screen""'`echo -ne '\015'``
