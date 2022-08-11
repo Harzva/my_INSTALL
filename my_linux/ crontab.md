@@ -10,3 +10,30 @@ crontab 是十分好用的排程自动执行工具, 它指定执行时间间隔�
 加入以下一行:
 @reboot sleep 60 ; /root/my-script.sh
 以上一行设定开机后等待 1 分钟 (60 秒), 自动执行 /root/my-script.sh, 将上面的 /root/my-script.sh 改成要执行的指令。
+
+
+问题描述：
+假设有一个定时任务，内容如下：
+
+00 00 * * * screen -S test; echo "test screen"; screen -d test
+1
+解释：每天晚上00:00， 用screen开启一个名为test会话，然后执行命令，之后将会话detached放在后台执行。
+
+但该命令无法正常执行，你会在系统邮件中收到该任务的执行失败提示：
+
+Must be connected to a terminal.
+test screen
+There is no screen to be detached matching test.
+
+解决方法：
+
+首先，在crontab命令之外，先用screen新建一个会话，比如还是上述的test
+crontab中的命令写为如下形式：
+screen -S sessionname -X stuff 'command'`echo -ne '\015'`
+1
+该命令的含义：将特定command发送到特定的screen会话
+其中，echo -ne '\015'模拟的是按下回车键。
+注意： command与最后的echo命令之间没有空格。
+比如，依旧是上述定时任务，就可写成如下形式：
+
+screen -S test -X stuff 'echo ""test screen""'`echo -ne '\015'`
