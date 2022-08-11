@@ -2,20 +2,27 @@
 
 一般上设定开机自动执行指令, 可以编辑 /etc/rc.local 档案, 而除了编辑 /etc/rc.local 外, 也可以用 crontab 完成。
 
-crontab 是十分好用的排程自动执行工具, 它指定执行时间间隔十分灵活, 其中一个做法是用 @reboot 参数, 设定成每次开机自动执行。
+## crontab 是十分好用的排程自动执行工具, 它指定执行时间间隔十分灵活, 其中一个做法是用 @reboot 参数, 设定成每次开机自动执行。
 
 首先开启 crontab:
 
-# crontab -e
+`crontab -e`
 加入以下一行:
+```
+
 @reboot sleep 60 ; /root/my-script.sh
+
+```
 以上一行设定开机后等待 1 分钟 (60 秒), 自动执行 /root/my-script.sh, 将上面的 /root/my-script.sh 改成要执行的指令。
 
 
-问题描述：
-假设有一个定时任务，内容如下：
+## 问题描述：假设有一个定时任务，内容如下：
+
+```
 
 00 00 * * * screen -S test; echo "test screen"; screen -d test
+```
+
 1
 解释：每天晚上00:00， 用screen开启一个名为test会话，然后执行命令，之后将会话detached放在后台执行。
 
@@ -29,7 +36,7 @@ There is no screen to be detached matching test.
 
 首先，在crontab命令之外，先用screen新建一个会话，比如还是上述的test
 crontab中的命令写为如下形式：
-screen -S sessionname -X stuff 'command'`echo -ne '\015'`
+`screen -S sessionname -X stuff 'command'`echo -ne '\015'``
 1
 该命令的含义：将特定command发送到特定的screen会话
 其中，echo -ne '\015'模拟的是按下回车键。
