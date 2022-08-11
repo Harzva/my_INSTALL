@@ -2,9 +2,14 @@ ethtool nic
 113
 df -h tmp
 
+```
+“Fatal error：can't bind to 127.0.0.1:xxxxx”
+打开命令行(管理员权限)，输入
+netsh winsock reset
+重启电脑即可
+```
+
 # Installation
-
-
 
 
 plug-in
