@@ -1,0 +1,2 @@
+sudo chown -R ubuntu:root docker/ 
+给当前用户使用docker/ 的root权限
