@@ -11,6 +11,8 @@ ssh-keygen
 将公钥密写入文件：
 ```
 cat id_rsa.pub >> authorized_keys
+or
+打开id_rsa.pub copy to  authorized_keys（vim）
 ```
 
 重新打开vscode 项目即可。
@@ -19,3 +21,7 @@ cat id_rsa.pub >> authorized_keys
 chmod 664 authorized_keys
 chmod 700 .ssh/
 ```
+
+
+[图解vscode远程开发+免密登录](https://zhuanlan.zhihu.com/p/439694736)
+
