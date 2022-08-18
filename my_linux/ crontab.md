@@ -72,3 +72,27 @@ screen -x -S $screen_name -p 0 -X stuff '\n'
 ```
 
 
+例如，如果您需要在重新启动后在网络可用时执行某些操作，则可以编写将在所需时间执行的systemd单元（当然，这仅适用于具有systemd的系统）。
+
+为此，请创建/etc/systemd/system/my_script.service具有以下内容的文件：
+
+
+```
+[Unit]
+Description=My script that requires network
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/full/path/to/my_script.sh
+
+[Install]
+WantedBy=multi-user.target
+然后执行：
+
+sudo systemctl daemon-reload
+sudo systemctl enable my_script
+```
+
+你完成了！
+
