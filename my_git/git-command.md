@@ -48,3 +48,37 @@ master 是一个本地分支
 origin/master是远程分支（它是名为“origin” 的远程分支的本地副本，名为“master”）
 git fetch origin main
 ```
+
+
+
+## 简易的命令行入门教程:
+Git 全局设置:
+
+
+```
+git config --global user.name "harzva"
+git config --global user.email "626609967@qq.com"
+```
+
+创建 git 仓库:
+
+
+```
+mkdir test
+cd test
+git init 
+touch README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin https://gitee.com/harzva/test.git
+git push -u origin "master"
+```
+
+已有仓库?
+
+```
+
+cd existing_git_repo
+git remote add origin https://gitee.com/harzva/test.git
+git push -u origin "master"
+```
